@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Candidate Experience — Process Improvement Case</title>
+<style>
+:root{
+  --ink:#17212b; --muted:#65727e; --line:#dbe2e8; --bg:#f5f7f9;
+  --card:#fff; --accent:#3f5667; --accent2:#e8eef2; --bad:#b4533c;
+  --good:#2f6b55; --shadow:0 10px 30px rgba(23,33,43,.08);
+}
+*{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+.container{max-width:1120px;margin:auto;padding:0 28px}
+.hero{background:#fff;border-bottom:1px solid var(--line)}
+.hero .container{padding-top:58px;padding-bottom:48px}
+.kicker{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+h1{font-size:42px;line-height:1.08;margin:0 0 16px;letter-spacing:-.03em;max-width:850px}
+.lead{font-size:18px;color:var(--muted);max-width:780px;margin:0}
+.badge{display:inline-block;margin-top:22px;padding:7px 11px;border:1px solid #cbd6de;border-radius:999px;font-size:13px;color:var(--accent);background:#f8fafb}
+section{padding:48px 0}.section-head{margin-bottom:24px}
+h2{font-size:25px;margin:0 0 7px;letter-spacing:-.02em}.sub{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:23px;box-shadow:0 4px 16px rgba(23,33,43,.035)}
+.num{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.08em}.card h3{font-size:18px;margin:7px 0}.card p{margin:0;color:var(--muted);font-size:16px}
+.priority.low{background:#e8eef2;color:var(--accent)}.priority.mid{background:#f6ede0;color:#8a5a14}.priority{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:5px 8px;border-radius:5px;background:#f2e7e4;color:var(--bad)}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;position:relative}
+.step strong{display:block;margin:6px 0}.step span{font-size:14px;color:var(--muted)}
+.step:not(:last-child):after{content:"→";position:absolute;right:-10px;top:38px;color:#8795a0;z-index:2}
+.mock-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.mock{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.mock-head{padding:17px 20px;background:var(--accent);color:#fff;font-weight:700}
+.mock-body{padding:20px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700;margin:16px 0 6px}
+.input,.select,.upload{border:1px solid var(--line);border-radius:7px;padding:10px 11px;background:#fff;font-size:14px}
+.upload{display:flex;justify-content:space-between;align-items:center}.replace{color:var(--accent);font-weight:700;font-size:12px}
+.row{display:grid;grid-template-columns:1fr 110px;gap:8px}.add{margin-top:8px;color:var(--accent);font-weight:700;font-size:13px}
+.btn{margin-top:20px;background:var(--accent);color:#fff;border:0;border-radius:7px;padding:11px 15px;font-weight:700;width:100%}
+.annotation{font-size:13px;color:var(--muted);padding:0 20px 18px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{background:#fff;border:1px solid var(--line);border-radius:12px;padding:19px}.metric strong{display:block;font-size:15px}.metric span{font-size:14px;color:var(--muted)}
+.closing{background:#17212b;color:#fff}.closing p{color:#cbd5dc;max-width:820px;font-size:17px}.closing .container{padding-top:48px;padding-bottom:54px}
+footer{font-size:13px;color:#7b8791;padding:24px 0 38px}
+@media(max-width:800px){h1{font-size:32px}.grid,.mock-wrap{grid-template-columns:1fr}.flow,.metrics{grid-template-columns:1fr 1fr}.step:not(:last-child):after{display:none}}
+.by{margin:18px 0 0;font-size:15px;color:var(--muted)}.by a{color:var(--accent)}.crit{margin:10px 0 0;font-size:14px;color:var(--muted);max-width:820px}.note{font-size:13px;color:var(--muted);margin:14px 0 0}a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <div class="kicker">Process Excellence / Candidate Experience</div>
+    <h1>Candidate Application Journey — A Small Process Improvement Case</h1>
+    <p class="lead">An observation made while completing an application, translated into a practical process and UX improvement proposal.</p>
+    <span class="badge">Independent candidate case study · not an official KK Group page</span>
+    <p class="by">Peipei Jiang · Barcelona · Application for Senior Specialist – AI &amp; Excellence · <a href="mailto:simbajiang30@gmail.com">simbajiang30@gmail.com</a></p>
+  </div>
+</header>
+
+<section>
+<div class="container">
+  <div class="section-head"><h2>1. What I observed</h2><p class="sub">The objective is not to criticise the interface, but to identify friction that can affect completion, recovery and candidate experience.</p>
+  <p class="crit">Impact is judged by three questions: does it make an error hard to reverse, does it reduce the quality of the data received, and how much effort would the fix need?</p></div>
+  <div class="grid">
+    <article class="card"><div class="num">01 · FUNCTIONAL / RECOVERY</div><h3>CV recovery</h3><p>After uploading a CV, the application flow did not provide a reliable way to replace it when the uploaded version needed to be corrected.</p><span class="priority">High impact</span></article>
+    <article class="card"><div class="num">02 · DATA / FORM DESIGN</div><h3>Multilingual information</h3><p>The language section appeared to support one language entry, without an obvious way to add additional languages. This is a mismatch with naturally multi-value candidate data.</p><span class="priority mid">Medium impact</span></article>
+    <article class="card"><div class="num">03 · USABILITY / HIERARCHY</div><h3>Selection and attachment clarity</h3><p>The scroll-based multi-select for country and nationality takes more effort than a searchable selector would. On the same page, the state of each attachment and the next required action could be clearer.</p><span class="priority low">Lower impact</span></article>
+  </div>
+</div>
+</section>
+
+<section style="padding-top:10px">
+<div class="container">
+  <div class="section-head"><h2>2. How I would approach it</h2><p class="sub">A simple process-excellence lens before jumping to a solution.</p></div>
+  <div class="flow">
+    <div class="step"><div class="num">01</div><strong>Identify friction</strong><span>Where does the candidate hesitate, fail or need to recover?</span></div>
+    <div class="step"><div class="num">02</div><strong>Diagnose cause</strong><span>Is it a functional defect, data-model limitation or usability issue?</span></div>
+    <div class="step"><div class="num">03</div><strong>Prioritise impact</strong><span>Which friction affects completion, quality or candidate experience most?</span></div>
+    <div class="step"><div class="num">04</div><strong>Redesign &amp; measure</strong><span>Change the workflow, then validate the improvement with evidence.</span></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-head"><h2>3. What the improved experience could look like</h2><p class="sub">A lightweight concept focused on recovery, clarity and multi-value candidate data. All values shown are illustrative.</p></div>
+  <div class="mock-wrap">
+    <div class="mock">
+      <div class="mock-head">Candidate Information</div>
+      <div class="mock-body">
+        <div class="label">Country / Region</div><div class="select">Search or select a country ▾</div>
+        <div class="label">Nationality</div><div class="select">Search or select, one or more ▾</div>
+        <div class="label">Languages</div>
+        <div class="row"><div class="input">English</div><div class="input">C1</div></div>
+        <div class="row" style="margin-top:8px"><div class="input">German</div><div class="input">B1</div></div>
+        <div class="add">＋ Add another language</div>
+        <button class="btn">Save &amp; Continue</button>
+      </div>
+    </div>
+    <div class="mock">
+      <div class="mock-head">Attachments</div>
+      <div class="mock-body">
+        <div class="label">CV</div>
+        <div class="upload"><span>CV.pdf</span><span class="replace">Replace file</span></div>
+        <div class="label">Cover Letter</div>
+        <div class="upload"><span>Cover_Letter.pdf</span><span class="replace">Replace file</span></div>
+        <div class="label">Upload status</div>
+        <div class="input">✓ Ready to submit</div>
+        <button class="btn">Continue to review</button>
+      </div>
+      <div class="annotation">The key change is not visual polish alone: the workflow explicitly supports correction and recovery.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-head"><h2>4. How I would measure the improvement</h2><p class="sub">The redesign should be validated through outcomes, not aesthetics.</p></div>
+  <div class="metrics">
+    <div class="metric"><strong>Completion rate</strong><span>Fewer candidates abandoning the application.</span></div>
+    <div class="metric"><strong>Recovery success</strong><span>Ability to replace or correct an attachment without restarting.</span></div>
+    <div class="metric"><strong>Time to complete</strong><span>Lower effort for common form interactions.</span></div>
+    <div class="metric"><strong>Candidate feedback</strong><span>Improved clarity and confidence in the submission process.</span></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-head"><h2>5. The experience behind this approach</h2><p class="sub">Operational improvement, capability building and hands-on AI workflow design.</p></div>
+  <div class="grid">
+    <article class="card"><h3>Amazon</h3><p>Interim Manager of 14 investigators. Worked on workflows, SOPs, knowledge sharing and onboarding. Raised team satisfaction from 3.7 to 4.3; my manager rating was in the company's top 25%.</p></article>
+    <article class="card"><h3>AI invoice translation workflow</h3><p>Reduced an 8-step, 3-tool process to 3 steps, while keeping business-critical information anchored to the original document.</p></article>
+    <article class="card"><h3>Spanish business, European company</h3><p>Improved operations and commercial performance; the business grew 3.1x.</p></article>
+  </div>
+</div>
+</section>
+
+<section class="closing">
+<div class="container">
+  <h2>Process improvement is the point.</h2>
+  <p>The objective is not to optimise the interface for its own sake, but to remove friction from the process and make the candidate journey easier to complete, recover and understand.</p>
+  <p style="font-size:14px;color:#9eacb6;margin-bottom:0">This case study was created independently as part of an application for an AI &amp; Excellence role.</p>
+</div>
+</section>
+
+<footer><div class="container">Peipei Jiang · Independent candidate case study · <a href="mailto:simbajiang30@gmail.com" style="color:inherit">simbajiang30@gmail.com</a></div></footer>
+</body>
+</html>
